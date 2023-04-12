@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+  </head>
+  <body>
+    <h1>TODOs</h1>
+    <form action="/data" method="post">
+      <input type="text" name="inputfield" id="" />
+      <button type="submit">Submit</button>
+      <%todo.forEach(todos=> {%>
+      <li><%= todos.todo%>
+        <a href="/delete/<%= todos._id%>">
+           <input type="button" value="Done">
+        </a>
+    </li>
+      <%})%>
+      <!-- <li><% todo%></li> -->
+
+    </form>
+  </body>
+</html>
